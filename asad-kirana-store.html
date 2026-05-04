@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asad Kirana Store – Mohanpur, Bihar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #FF6B00;
+      --saffron-light: #FF9A3C;
+      --green: #1a6b2f;
+      --green-light: #2d9e48;
+      --cream: #FFF8EE;
+      --warm-white: #FFFDF8;
+      --dark: #1a1008;
+      --brown: #5c3a1e;
+      --gold: #d4a017;
+      --red: #c0392b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hind', sans-serif;
+      background: var(--warm-white);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── MARQUEE TOP BAR ── */
+    .topbar {
+      background: var(--green);
+      color: white;
+      padding: 0.5rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 18s linear infinite;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(100vw); }
+      to   { transform: translateX(-100%); }
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--saffron);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 15px rgba(255,107,0,0.4);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.8rem 0;
+    }
+
+    .nav-icon {
+      width: 44px;
+      height: 44px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .nav-title {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.5rem;
+      color: white;
+      line-height: 1;
+    }
+
+    .nav-sub {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.1em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 1.2rem 1.2rem;
+      color: white;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover { background: rgba(0,0,0,0.15); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 40%, #FFF8EE 100%);
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 4rem 5%;
+      gap: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,107,0,0.12), transparent 70%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,107,47,0.1), transparent 70%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span { color: var(--saffron); }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--brown);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--saffron);
+      color: white;
+      padding: 0.85rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(255,107,0,0.35);
+    }
+
+    .btn-primary:hover { background: #e05d00; transform: translateY(-2px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--green);
+      padding: 0.85rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid var(--green);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { background: var(--green); color: white; }
+
+    .hero-pills {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      background: white;
+      border: 1px solid rgba(255,107,0,0.2);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* Hero Right – decorative shop illustration */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shop-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      animation: floatUp 6s ease-in-out infinite;
+    }
+
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .shop-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold), var(--green));
+    }
+
+    .shop-emoji-row {
+      display: flex;
+      gap: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .shop-card h3 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.4rem;
+      color: var(--saffron);
+      margin-bottom: 0.3rem;
+    }
+
+    .shop-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── STORE PHOTO ── */
+    .store-photo-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      animation: floatUp 6s ease-in-out infinite;
+    }
+
+    .store-photo-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .store-photo-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(26,16,8,0.85) 0%, transparent 100%);
+      padding: 2rem 1.5rem 1.5rem;
+      color: white;
+    }
+
+    .store-photo-overlay h3 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.4rem;
+      color: var(--saffron-light);
+      margin-bottom: 0.3rem;
+    }
+
+    .store-photo-overlay p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .store-photo-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--saffron);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(255,107,0,0.5);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+
+    .mini-stat {
+      background: linear-gradient(135deg, #FFF3E0, #FFE8CC);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .mini-stat .num {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.6rem;
+      color: var(--saffron);
+    }
+
+    .mini-stat .lbl {
+      font-size: 0.72rem;
+      color: var(--brown);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── SECTION SHARED ── */
+    .section { padding: 5rem 5%; }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--saffron), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .section-title {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: #666;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .underline-saffron {
+      width: 60px;
+      height: 3px;
+      background: var(--saffron);
+      border-radius: 2px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* ── CATEGORIES ── */
+    .categories { background: var(--cream); }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .cat-card:hover {
+      border-color: var(--saffron);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(255,107,0,0.15);
+    }
+
+    .cat-icon { font-size: 3rem; margin-bottom: 0.8rem; }
+
+    .cat-card h3 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .cat-card p { font-size: 0.82rem; color: #888; line-height: 1.5; }
+
+    .cat-tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: #FFF3E0;
+      color: var(--saffron);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    /* ── PRODUCTS ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    }
+
+    .product-img {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 0.8rem;
+      right: 0.8rem;
+      background: var(--red);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .product-body { padding: 1.2rem; }
+
+    .product-body h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .product-body .brand {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 0.6rem;
+    }
+
+    .product-price {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.3rem;
+      color: var(--green);
+    }
+
+    .product-price .old {
+      font-family: 'Hind', sans-serif;
+      font-size: 0.85rem;
+      color: #bbb;
+      text-decoration: line-through;
+      margin-left: 0.5rem;
+    }
+
+    .add-btn {
+      width: 100%;
+      margin-top: 0.8rem;
+      padding: 0.6rem;
+      background: var(--saffron);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .add-btn:hover { background: #e05d00; }
+
+    /* ── WHY US ── */
+    .why-section { background: var(--dark); color: white; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 2rem 1rem;
+      border: 1px solid rgba(255,107,0,0.2);
+      border-radius: 16px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .why-card:hover {
+      border-color: var(--saffron);
+      background: rgba(255,107,0,0.06);
+    }
+
+    .why-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .why-card h3 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.1rem;
+      color: var(--saffron-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* ── BANNER ── */
+    .offer-banner {
+      background: linear-gradient(135deg, var(--saffron) 0%, var(--gold) 50%, var(--green) 100%);
+      padding: 4rem 5%;
+      text-align: center;
+      color: white;
+    }
+
+    .offer-banner h2 {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .offer-banner p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--cream); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.8rem;
+      color: var(--saffron);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .c-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--saffron);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .c-text strong {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 0.2rem;
+    }
+
+    .c-text span { font-size: 1rem; color: var(--dark); }
+
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+
+    .hours-table tr { border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+    .hours-table td {
+      padding: 0.6rem 0;
+      font-size: 0.9rem;
+    }
+
+    .hours-table td:last-child { text-align: right; color: var(--green); font-weight: 600; }
+
+    .map-box {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    }
+
+    .map-box iframe { width: 100%; height: 380px; border: none; display: block; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 5% 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand h2 {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.8rem;
+      color: var(--saffron);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--saffron-light);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 3rem 5%; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      nav { flex-wrap: wrap; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 500px) {
+      .cat-grid, .products-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="marquee-track">
+    🛒 Welcome to Asad Kirana Store — Your Neighbourhood Shop in Mohanpur, Bihar &nbsp;&nbsp;|&nbsp;&nbsp;
+    🥛 Fresh Dairy · 🌾 Grains · 🧴 Daily Essentials · 🍬 Snacks · 🧹 Household Items &nbsp;&nbsp;|&nbsp;&nbsp;
+    📍 Ward 05, Mahathi South, Mohanpur, Bihar – 848211 &nbsp;&nbsp;|&nbsp;&nbsp;
+    📞 Call us for home delivery! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🏪</div>
+    <div>
+      <div class="nav-title">Asad Kirana Store</div>
+      <div class="nav-sub">Mohanpur · Bihar</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Est. Mohanpur, Bihar</div>
+    <h1>आपकी अपनी<br/><span>Kirana Dukaan</span></h1>
+    <p class="hero-tagline">
+      Your trusted neighbourhood store for daily essentials, fresh groceries, snacks, and household needs — right in the heart of Mohanpur.
+    </p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">🛒 Shop Now</a>
+      <a href="#contact" class="btn-secondary">📍 Find Us</a>
+    </div>
+    <div class="hero-pills">
+      <div class="pill">✅ Fresh Daily</div>
+      <div class="pill">🚚 Home Delivery</div>
+      <div class="pill">💰 Best Prices</div>
+      <div class="pill">🤝 Trusted Since Years</div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="store-photo-wrap">
+      <img src="IMG-20260417-WA0005.jpg" alt="Asad Kirana Store – Mohanpur, Bihar"/>
+      <div class="store-photo-badge">🏪 Our Store</div>
+      <div class="store-photo-overlay">
+        <h3>Asad Kirana Store</h3>
+        <p>📍 Ward 05, Mohanpur, Bihar — Open Daily 6 AM – 10 PM</p>
+      </div>
+    </div>
+    <div class="shop-card" style="display:none">
+      <div class="shop-emoji-row">🌾 🧴 🥛 🍬 🧹 🛢️</div>
+      <h3>Everything You Need</h3>
+      <p>From atta-dal to shampoo, from snacks to spices — we stock it all so you don't have to go anywhere else.</p>
+    </div>
+    <div class="stat-row">
+      <div class="mini-stat">
+        <div class="num">500+</div>
+        <div class="lbl">Products</div>
+      </div>
+      <div class="mini-stat">
+        <div class="num">100+</div>
+        <div class="lbl">Customers</div>
+      </div>
+      <div class="mini-stat">
+        <div class="num">Daily</div>
+        <div class="lbl">Fresh Stock</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="section categories">
+  <div class="section-head">
+    <div class="section-label">What We Sell</div>
+    <h2 class="section-title">Our Categories</h2>
+    <p class="section-desc">Everything a household needs — all under one roof at the best prices in Mohanpur.</p>
+    <div class="underline-saffron"></div>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-icon">🌾</div>
+      <h3>Grains & Pulses</h3>
+      <p>Atta, chawal, dal, besan and more — fresh and quality assured</p>
+      <span class="cat-tag">50+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🧴</div>
+      <h3>Personal Care</h3>
+      <p>Soaps, shampoos, toothpaste, oils — top brands available</p>
+      <span class="cat-tag">80+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🥛</div>
+      <h3>Dairy & Beverages</h3>
+      <p>Milk, tea, biscuits, cold drinks and packaged juices</p>
+      <span class="cat-tag">40+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🍿</div>
+      <h3>Snacks & Munchies</h3>
+      <p>Namkeen, chips, toffees, biscuits — for every craving</p>
+      <span class="cat-tag">100+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🧹</div>
+      <h3>Household Cleaning</h3>
+      <p>Detergent, phenyl, jhadu, brush — daily cleaning essentials</p>
+      <span class="cat-tag">60+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🌶️</div>
+      <h3>Spices & Masala</h3>
+      <p>Haldi, mirch, dhania, garam masala — all spice brands</p>
+      <span class="cat-tag">70+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🛢️</div>
+      <h3>Cooking Oil</h3>
+      <p>Mustard oil, refined oil, vanaspati ghee — all sizes</p>
+      <span class="cat-tag">20+ items</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🧃</div>
+      <h3>Packaged Foods</h3>
+      <p>Noodles, pasta, sauces, pickles, jams and more</p>
+      <span class="cat-tag">90+ items</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section" style="background: white;">
+  <div class="section-head">
+    <div class="section-label">Today's Picks</div>
+    <h2 class="section-title">Popular Products</h2>
+    <p class="section-desc">Best-selling items that our customers love and trust every day.</p>
+    <div class="underline-saffron"></div>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img" style="background:#FFF8E1;">🌾
+        <span class="product-badge">BEST SELLER</span>
+      </div>
+      <div class="product-body">
+        <h4>Aashirvaad Atta</h4>
+        <div class="brand">ITC | 5 kg bag</div>
+        <div class="product-price">₹260 <span class="old">₹290</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:#E8F5E9;">🫙
+        <span class="product-badge">FRESH</span>
+      </div>
+      <div class="product-body">
+        <h4>Tata Salt</h4>
+        <div class="brand">Tata Consumer | 1 kg</div>
+        <div class="product-price">₹22 <span class="old">₹25</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:#FFF3E0;">🧴
+        <span class="product-badge">HOT DEAL</span>
+      </div>
+      <div class="product-body">
+        <h4>Surf Excel</h4>
+        <div class="brand">HUL | 1 kg pack</div>
+        <div class="product-price">₹185 <span class="old">₹210</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:#FCE4EC;">🌶️</div>
+      <div class="product-body">
+        <h4>MDH Garam Masala</h4>
+        <div class="brand">MDH | 100 g</div>
+        <div class="product-price">₹75 <span class="old">₹85</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:#E3F2FD;">☕</div>
+      <div class="product-body">
+        <h4>Brooke Bond Red Label</h4>
+        <div class="brand">HUL | 500 g pack</div>
+        <div class="product-price">₹195 <span class="old">₹220</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:#F3E5F5;">🍜</div>
+      <div class="product-body">
+        <h4>Maggi Noodles</h4>
+        <div class="brand">Nestlé | Pack of 12</div>
+        <div class="product-price">₹144 <span class="old">₹168</span></div>
+        <button class="add-btn">Add to List</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section why-section">
+  <div class="section-head">
+    <div class="section-label">Our Promise</div>
+    <h2 class="section-title" style="color:white;">Why Choose Us?</h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.6);">We've been serving Mohanpur with honesty, quality, and care.</p>
+    <div class="underline-saffron"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Best Prices</h3>
+      <p>We offer competitive rates on all products so your family budget stays on track every month.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">✅</div>
+      <h3>Quality Assured</h3>
+      <p>Only trusted brands and fresh stock — we never compromise on what goes into your home.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Trusted by Locals</h3>
+      <p>Serving families of Mohanpur and Mahathi South with honesty and personal care for years.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🚚</div>
+      <h3>Home Delivery</h3>
+      <p>Can't make it to the shop? Call us and we'll deliver your essentials right to your doorstep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER BANNER -->
+<div class="offer-banner">
+  <h2>🎉 Special Offer for Regular Customers!</h2>
+  <p>Buy groceries worth ₹500 or more and get FREE home delivery within Mohanpur area.</p>
+  <a href="#contact" class="btn-primary" style="background:white; color:var(--saffron);">📞 Call Now to Order</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="section-head">
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Visit Our Store</h2>
+    <div class="underline-saffron"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Asad Kirana Store</h3>
+
+      <div class="contact-item">
+        <div class="c-icon">📍</div>
+        <div class="c-text">
+          <strong>Address</strong>
+          <span>Ward 05, Po Mohanpur, Mahathi South, Bihar – 848211</span>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="c-icon">🕐</div>
+        <div class="c-text">
+          <strong>Store Hours</strong>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>6:00 AM – 10:00 PM</td></tr>
+            <tr><td>Saturday</td><td>6:00 AM – 10:00 PM</td></tr>
+            <tr><td>Sunday</td><td>7:00 AM – 9:00 PM</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="c-icon">📦</div>
+        <div class="c-text">
+          <strong>Delivery</strong>
+          <span>Available within Mohanpur area — call to confirm</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606!2d85.9!3d25.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edf3dbb6308905%3A0x67948cd19779b923!2sAsad%20Kirana%20Store!5e0!3m2!1sen!2sin!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>🏪 Asad Kirana Store</h2>
+      <p>Your trusted neighbourhood grocery store in Mohanpur, Bihar. Serving the community with quality products at honest prices every single day.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li>Grains & Pulses</li>
+        <li>Personal Care</li>
+        <li>Dairy & Beverages</li>
+        <li>Snacks & Munchies</li>
+        <li>Household Items</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li>About Store</li>
+        <li>Products</li>
+        <li>Home Delivery</li>
+        <li>Contact Us</li>
+        <li>Location</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Asad Kirana Store · Ward 05, Mohanpur, Bihar – 848211 · All Rights Reserved
+  </div>
+</footer>
+
+</body>
+</html>
